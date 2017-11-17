@@ -145,6 +145,7 @@ int node_insert(struct node **pList,int position,int value)
 //功能：插入一个节点
 //参数：*pList头节点 position：插入的节点位置
 //返回值 0成功 1：失败
+
 int node_delete(struct node **pList,int position)
 {
 	struct node *p1=NULL,*p2=NULL,*insert;
@@ -187,6 +188,7 @@ int node_delete(struct node **pList,int position)
 //函数功能：向节点写入数据
 //入口参数：*pList:链表指针，position：节点位置， value:写入值
 //返回值0：成功，其它：失败
+
 int write_data(struct node *pList,int position, int value)
 {
     struct node *p=NULL;
@@ -196,6 +198,7 @@ int write_data(struct node *pList,int position, int value)
 
     return 0;
 }
+
 int main()
 {
 	struct node *head;
