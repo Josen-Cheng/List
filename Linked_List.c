@@ -10,10 +10,10 @@
 ******************************************************************************/
 
 #define OK           (0)              /*it is return value               */ 
-#define ERROR        (1)    		      /*it is return value               */ 
+#define ERROR        (1)    	      /*it is return value               */ 
 #define HEAD_NODE    (1)              /*it is a flag of head_node        */
-#define HEAD_WAY     OK				        /*it is a insert way of the node   */
-#define TAIL_WAY     ERROR			      /*it is a insert way of the node   */
+#define HEAD_WAY     OK		      /*it is a insert way of the node   */
+#define TAIL_WAY     ERROR	      /*it is a insert way of the node   */
 #define MAX_NUM      10               /*it is size of array              */
 
 /*Define the structure*/
