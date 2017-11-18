@@ -244,17 +244,16 @@ int main()
 
 	if(Creat_List(&head,num,0)==OK){
         for(position=1;position<=num;position++,value++)
-            Write_Data(head,position, value,3);
-	}
-    if(Node_Insert(&head,node,5)==OK){
-        printf("Node %d insert success\n",node);
-    }
-    if(Node_Delete(&head,10)!=OK){
+            	Write_Data(head,position, value,3);
+     	}
+       if(Node_Insert(&head,node,5)==OK){
+        	printf("Node %d insert success\n",node);
+        }
+   	 if(Node_Delete(&head,10)!=OK){
         printf("Delete node %d failed\n");
-    }
+        }
 
 	Node_Printf(head);      
-
-
+	
 	return OK;
 }
