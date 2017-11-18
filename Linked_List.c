@@ -6,7 +6,7 @@
 * Function   : One-way linked list
 * Description: The basic operation of linked list.
 * Author     : Taijizhch
-* Date       : 29th Apr 2016
+* Date       : 18th November 2017
 ******************************************************************************/
 
 #define OK           (0)              /*it is return value               */ 
@@ -235,7 +235,7 @@ int Write_Data(Node *pList,int position, int value,int offset)
 }
 /******************************************************************************
 * Name       : int main()
-* Function   : Teat function.
+* Function   : Test function.
 ******************************************************************************/
 int main()
 {
