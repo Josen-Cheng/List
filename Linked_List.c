@@ -5,7 +5,7 @@
 * File       : List.c
 * Function   : One-way linked list
 * Description: The basic operation of linked list.
-* Author     : Taijizhch
+* Author     : Josen Cheng
 * Date       : 18th November 2017
 ******************************************************************************/
 
