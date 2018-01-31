@@ -19,8 +19,8 @@
 /*Define the structure*/
 typedef struct node
 {
-    int data[MAX_NUM];
-    struct node *next;
+ 	int data[MAX_NUM];
+    	struct node *next;
 }Node;
 /******************************************************************************
 * Name       : int Array_Init(int *addr,int length,int value)
@@ -28,12 +28,11 @@ typedef struct node
 ******************************************************************************/
 int Array_Init(int *addr,int length,int value)
 {
-    int cnt;
-    for(cnt=0;cnt<length;cnt++){
-            addr[cnt]=value;
-    }
-
-    return OK;
+	int cnt;
+   	for(cnt=0;cnt<length;cnt++){
+    		addr[cnt]=value;
+    	}
+    	return OK;
 }
 /******************************************************************************
 * Name       : int Creat_List(Node **pList,int size, char mode)
@@ -41,50 +40,49 @@ int Array_Init(int *addr,int length,int value)
 ******************************************************************************/
 int Creat_List(Node **pList,int size, char mode)
 {
-    Node *p=NULL,*sList = NULL;
+	Node *p=NULL,*sList = NULL;
 
-    sList=(Node*)malloc(sizeof(struct node));
-    if(sList==NULL){
-	printf("List creat failed!\n");
-    }
+    	sList=(Node*)malloc(sizeof(struct node));
+    	if(sList==NULL){
+		printf("List creat failed!\n");
+    	}
 
-    Array_Init(sList->data,MAX_NUM,0);
-    sList->next=NULL;
-    *pList=sList;
+    	Array_Init(sList->data,MAX_NUM,0);
+    	sList->next=NULL;
+    	*pList=sList;
 
-    if(HEAD_WAY==mode)  
-    {
-        while(size--)
-        {
-            sList=(struct node*)malloc(sizeof(Node));
-            if(sList==NULL){
-                printf("List Creat failed!\n");
-            }
-            Array_Init(sList->data,MAX_NUM,0);
-            sList->next=*pList;
-            *pList=sList;
+    	if(HEAD_WAY==mode)  
+    	{
+       		while(size--)
+        	{
+            		sList=(struct node*)malloc(sizeof(Node));
+            		if(sList==NULL){
+                	printf("List Creat failed!\n");
+            		}
+            	Array_Init(sList->data,MAX_NUM,0);
+           	sList->next=*pList;
+            	*pList=sList;
+        	}
+   	}
+    	else if(TAIL_WAY==mode)  
+    	{
+        	p=*pList;
+       	 	while(size--)
+        	{
+            		sList=(struct node*)malloc(sizeof(Node));
+            		p->next = sList;
+           	 	Array_Init(sList->data,MAX_NUM,0);
+            		sList->next = NULL;
+            		p=sList;
+        	}
+    	}
+    	else{
+       		printf("Mode is 0 or 1\n");
+        	return ERROR;
+    	}
 
-        }
-    }
-    else if(TAIL_WAY==mode)  
-    {
-        p=*pList;
-        while(size--)
-        {
-            sList=(struct node*)malloc(sizeof(Node));
-            p->next = sList;
-            Array_Init(sList->data,MAX_NUM,0);
-            sList->next = NULL;
-            p=sList;
-        }
-    }
-    else{
-        printf("Mode is 0 or 1\n");
-        return ERROR;
-    }
-
-    printf("List Creat success!\n");
-    return OK;
+    	printf("List Creat success!\n");
+    	return OK;
 }
 /******************************************************************************
 * Name       : Node* Node_Traverse(Node *pList,int position)
@@ -92,15 +90,15 @@ int Creat_List(Node **pList,int size, char mode)
 ******************************************************************************/
 Node* Node_Traverse(Node *pList,int position)
 {
-    int cnt=0;
+    	int cnt=0;
 
-    while(cnt != position)
-    {
-        cnt++;
-        pList=pList->next;
-    }
+    	while(cnt != position)
+    	{
+        	cnt++;
+        	pList=pList->next;
+    	}
 	/*Return node pointer*/
-    return pList;
+    	return pList;
 }
 /******************************************************************************
 * Name       : int Node_Printf(Node *pList)
@@ -121,7 +119,6 @@ int Node_Printf(Node *pList)
             printf("\n");
 	    p=p->next;
 	}
-
 	return OK;
 }
 /******************************************************************************
@@ -225,12 +222,12 @@ int Node_Delete(Node **pList,int position)
 ******************************************************************************/
 int Write_Data(Node *pList,int position, int value,int offset)
 {
-    Node *p=NULL;
+    	Node *p=NULL;
 
-    p = Node_Traverse(pList,position-1);
-    p->data[offset-1] = value;
+    	p = Node_Traverse(pList,position-1);
+    	p->data[offset-1] = value;
 
-    return OK;
+    	return OK;
 }
 /******************************************************************************
 * Name       : int main()
