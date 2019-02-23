@@ -6,7 +6,7 @@
 * Function   : One-way linked list
 * Description: The basic operation of linked list.
 * Author     : Josen Cheng
-* Date       : 18th November 2017
+* Date       : 18th November 2017 ???
 ******************************************************************************/
 
 #define OK           (0)              /*it is return value               */ 
